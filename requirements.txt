@@ -1,0 +1,4 @@
+# torch --extra-index-url https://download.pytorch.org/whl/cpu
+https://download.pytorch.org/whl/cpu/torch-1.11.0%2Bcpu-cp39-cp39-linux_x86_64.whl
+sentence-transformers==2.2.0
+loguru==0.6.0
