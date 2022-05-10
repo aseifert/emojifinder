@@ -1,7 +1,9 @@
-region := "<your_region>"
-endpoint_uri := "<your_lambda_endpoint_uri>"
-repo_uri := "<your_ecr_repository_uri>"
-image_name := "emojifinder"
+set dotenv-load := true
+
+region := env_var_or_default("region", "<your_region>")
+endpoint_uri := env_var_or_default("endpoint_uri", "<your_lambda_endpoint_uri>")
+repo_uri := env_var_or_default("repo_uri", "<your_ecr_repository_uri>")
+image_name := env_var_or_default("image_name", "emojifinder")
 
 default:
     @just --list

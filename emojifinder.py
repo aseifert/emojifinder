@@ -36,7 +36,7 @@ def find_emoji(
     model: SentenceTransformer,
     embeddings,
     n=1,
-):
+) -> list[Emoji]:
     """embed file, calculate similarity to existing embeddings, return top n hits"""
     embedded_desc: torch.Tensor = model.encode(query, convert_to_tensor=True)  # type: ignore
     sims = cos_sim(embedded_desc, embeddings)
